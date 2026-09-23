@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет-магазин</title>
+    <link rel="stylesheet" href="C:\Users\Student\Project\programming-languages-and-technologies\PR4\task16\style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Оформление заказа</h1>
+
+    <form id="shopForm">
+
+        <section>
+            <h2>Контактные данные</h2>
+
+            <label for="name">ФИО:</label>
+            <input type="text" id="name" placeholder="Введите ФИО">
+            <p class="error" id="nameError"></p>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" placeholder="example@mail.com">
+            <p class="error" id="emailError"></p>
+
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" placeholder="+7 777 123 45 67">
+            <p class="error" id="phoneError"></p>
+        </section>
+
+        <section>
+            <h2>Доставка</h2>
+
+            <label for="address">Адрес доставки:</label>
+            <input type="text" id="address" placeholder="Введите адрес">
+            <p class="error" id="addressError"></p>
+
+            <p>Способ доставки:</p>
+
+            <label>
+                <input type="radio" name="delivery" value="Курьер">
+                Курьер
+            </label>
+
+            <label>
+                <input type="radio" name="delivery" value="Самовывоз">
+                Самовывоз
+            </label>
+
+            <p class="error" id="deliveryError"></p>
+        </section>
+
+        <section>
+            <h2>Оплата</h2>
+
+            <p>Способ оплаты:</p>
+
+            <label>
+                <input type="radio" name="payment" value="Банковская карта">
+                Банковская карта
+            </label>
+
+            <label>
+                <input type="radio" name="payment" value="Наличные">
+                Наличные
+            </label>
+
+            <label>
+                <input type="radio" name="payment" value="Онлайн">
+                Онлайн
+            </label>
+
+            <p class="error" id="paymentError"></p>
+        </section>
+
+        <section>
+            <h2>Дополнительные услуги</h2>
+
+            <label>
+                <input type="checkbox" name="services" value="Подарочная упаковка">
+                Подарочная упаковка
+            </label>
+
+            <label>
+                <input type="checkbox" name="services" value="Экспресс-доставка">
+                Экспресс-доставка
+            </label>
+
+            <label>
+                <input type="checkbox" name="services" value="Позвонить перед доставкой">
+                Позвонить перед доставкой
+            </label>
+        </section>
+
+        <section>
+            <label class="agreement">
+                <input type="checkbox" id="agreement">
+                Я согласен с условиями оформления заказа
+            </label>
+
+            <p class="error" id="agreementError"></p>
+        </section>
+
+        <button type="submit">Оформить заказ</button>
+
+    </form>
+
+    <div id="result"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
