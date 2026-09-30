@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Карточка студента</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eef2f7;
+            color: #222;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 650px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        #createButton {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            background: #3498db;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #createButton:hover {
+            background: #2980b9;
+        }
+
+        #message {
+            text-align: center;
+            color: #e74c3c;
+            min-height: 20px;
+            margin-top: 10px;
+        }
+
+        #studentCard {
+            display: none;
+            margin-top: 25px;
+            padding: 25px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #3498db, #8e44ad);
+            color: white;
+        }
+
+        #studentCard h2 {
+            margin-top: 0;
+        }
+
+        .student-info {
+            margin: 10px 0;
+            font-size: 17px;
+        }
+
+        .student-label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Карточка студента</h1>
+
+        <div class="form-group">
+            <label for="name">Имя и фамилия</label>
+            <input
+                type="text"
+                id="name"
+                placeholder="Например: Иван Иванов"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="group">Группа</label>
+            <input
+                type="text"
+                id="group"
+                placeholder="Например: ИС-23"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="course">Курс</label>
+            <input
+                type="number"
+                id="course"
+                min="1"
+                max="6"
+                placeholder="От 1 до 6"
+            >
+        </div>
+
+        <button id="createButton">Создать карточку</button>
+
+        <p id="message"></p>
+
+        <div id="studentCard">
+            <h2>Карточка студента</h2>
+
+            <p class="student-info">
+                <span class="student-label">Имя:</span>
+                <span id="cardName"></span>
+            </p>
+
+            <p class="student-info">
+                <span class="student-label">Группа:</span>
+                <span id="cardGroup"></span>
+            </p>
+
+            <p class="student-info">
+                <span class="student-label">Курс:</span>
+                <span id="cardCourse"></span>
+            </p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
