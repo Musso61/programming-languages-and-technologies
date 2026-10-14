@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости факультета - SPA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Факультет Информационных Технологий</h1>
+        </header>
+        
+        <nav class="tabs">
+            <button class="tab-btn active" data-page="news">Новости</button>
+            <button class="tab-btn" data-page="events">События</button>
+            <button class="tab-btn" data-page="announcements">Объявления</button>
+        </nav>
+
+        <div id="filter-container" style="margin-bottom: 15px;">
+            <input type="text" id="search-input" placeholder="Поиск по ключевому слову..." style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
+
+        <main id="content" class="content-box">
+            <!-- Динамический контент -->
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
