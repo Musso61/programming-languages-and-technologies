@@ -1,0 +1,162 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    padding: 30px 15px;
+}
+
+.container {
+    max-width: 750px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input {
+    flex: 1;
+    min-width: 150px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+button {
+    padding: 12px 18px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #4d5fc7;
+}
+
+#message {
+    min-height: 25px;
+    margin-bottom: 10px;
+    color: #d63031;
+    font-weight: bold;
+}
+
+.statistics {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.stat-card {
+    flex: 1;
+    background: #f0f2ff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.stat-card h3 {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #667eea;
+}
+
+h2 {
+    margin: 25px 0 15px;
+    color: #333;
+}
+
+.student-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    background: #f7f7f7;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.student-info {
+    overflow-wrap: anywhere;
+}
+
+.student-grade {
+    color: #667eea;
+    font-weight: bold;
+}
+
+.delete-button {
+    background: #e74c3c;
+}
+
+.delete-button:hover {
+    background: #c0392b;
+}
+
+.clear-button {
+    width: 100%;
+    margin-top: 15px;
+    background: #555;
+}
+
+.clear-button:hover {
+    background: #333;
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 18px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    input, form button {
+        width: 100%;
+    }
+
+    .statistics {
+        flex-direction: column;
+    }
+
+    .student-item {
+        flex-wrap: wrap;
+    }
+}
